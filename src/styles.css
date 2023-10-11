@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* Set the background color of the entire application */
+html, body {
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  /* Set the primary color for links, buttons, and accents */
+  a, button, .primary-accent {
+    color: var(--primary-color);
+  }
+  
+  /* Example of using the custom primary color for buttons */
+  button {
+    background-color: var(--primary-color);
+  }
+  

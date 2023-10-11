@@ -1,0 +1,47 @@
+/* Add custom styles for the header */
+.mat-toolbar {
+    background-color: #1889da; /* Header background color */
+    color: white; 
+    height: 64px;
+    z-index: 2000;
+    position: fixed;
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .logo mat-icon {
+    margin-right: 8px; /* Add space between icon and text */
+  }
+  
+  /* Spacer to push buttons to the right */
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Navigation buttons styles */
+  .mat-toolbar-row button {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-left: 16px; /* Add space between buttons */
+    font-size: 14px; /* Button font size */
+    padding: 0 12px; /* Add horizontal padding to buttons */
+  }
+  
+  .mat-toolbar-row button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background color */
+    color: white; /* Hover text color */
+  }
+  
+  /* Adjust hover effect */
+  .mat-toolbar-row button:not(:hover) {
+    transition: background-color 0.2s ease;
+  }
+  

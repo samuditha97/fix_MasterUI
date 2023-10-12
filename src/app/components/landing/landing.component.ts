@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { CustomerRegistrationComponent } from 'src/app/customer-registration/customer-registration.component';
 
 @Component({
   selector: 'app-landing',
@@ -7,12 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  constructor(private router: Router) {}
-  navigateToCustomer() {
-    this.router.navigate(['/customer']);
+  constructor(public dialog: MatDialog) {}
+
+  openRegistrationDialog(): void {
+    const dialogRef = this.dialog.open(CustomerRegistrationComponent, {
+      width: '800px',
+      panelClass: 'custom-dialog',
+    });
   }
 
-  navigateToServiceProvider() {
-    this.router.navigate(['/service-provider']);
-  }
+  
 }

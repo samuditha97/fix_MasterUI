@@ -3,6 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CustomerService } from '../Services/customer.service';
 import { ToastrService } from 'ngx-toastr'; 
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginPopupComponent } from '../components/customerLogin/login-popup/login-popup.component';
+import { MatDialog } from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-customer-registration',
@@ -12,10 +15,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CustomerRegistrationComponent {
   registrationForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private customerService: CustomerService, private snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, private customerService: CustomerService, private snackBar: MatSnackBar,private dialog: MatDialog, private https: HttpClient) {
 
     this.registrationForm = this.formBuilder.group({
-      id:[''],
+      id: [''],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       mobileNo: ['', Validators.required],
@@ -26,6 +29,7 @@ export class CustomerRegistrationComponent {
 onSubmit() {
   if (this.registrationForm.valid) {
     const customerData = this.registrationForm.value;
+    console.log("kkkkkk");
     this.customerService.registerCustomer(customerData).subscribe(
       response => {
         console.log('Customer registered successfully:', response);
@@ -43,6 +47,19 @@ onSubmit() {
 showSnackBar(message: string, action: string) {
   this.snackBar.open(message, action, {
     duration: 3000,
+  });
+}
+
+showLoginPopup() {
+  const dialogRef = this.dialog.open(LoginPopupComponent, {
+    width: '250px' // Set the width of the dialog as needed
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    if (result) {
+      // The customer logged in, and you can access the email from result.email
+      console.log(`Logged in with email: ${result.email}`);
+    }
   });
 }
 }

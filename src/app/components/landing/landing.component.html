@@ -1,15 +1,69 @@
 <div class="landing-page">
-    <div class="content">
-      <mat-card class="card customer-card" (click)="navigateToServiceProvider()">
-        <mat-card-content>
-          <p>Service Provider</p>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="card service-provider-card" (click)="navigateToCustomer()">
-        <mat-card-content>
-          <p>Customer</p>
-        </mat-card-content>
-      </mat-card>
+    <header class="header">
+        <div class="logo">
+            <img src="../../../assets/logo.png" alt="Your Brand Logo" width="100" height="100">
+            <h1>Fix Master</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/myprofile">My Profile</a></li>
+                <li><a routerLink="/testimonials">Appointments</a></li>
+                <li><a routerLink="/get-started">Services</a></li>
+                <li><a routerLink="/get-started">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>Welcome to Fix Master World</h2>
+        <p>Explore a world of incredible features and top-notch services that can transform your home.</p>
+        <a routerLink="/customer" class="cta-button" (click)="openRegistrationDialog()" >Get Started</a>
     </div>
-  </div>
-  
+    <div class="features">
+        <h3>Key Features</h3>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p class="feature-description">Easy Booking: Schedule home repair services at your convenience with just a few clicks.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p class="feature-description">Verified Technicians: Connect with skilled and certified professionals for reliable services.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p class="feature-description">Transparent Pricing: Know the cost upfront and avoid surprises with clear and fair pricing.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p class="feature-description">Real-time Tracking: Stay informed with live updates on technician location and service progress.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-check-circle"></i>
+            <p class="feature-description">Secure Payments: Pay securely online and receive digital invoices for your records.</p>
+        </div>
+    </div>
+    
+    
+    <div class="testimonials">
+        <h3>What Our Customers Say</h3>
+        <div class="testimonial">
+            <img src="../../../assets/cust1.png" alt="Customer 1">
+            <p>"I was impressed by the efficiency of FixMasters. Their technicians arrived on time and completed the repair quickly. Highly recommended!"</p>
+            <cite>- John Smith - CEO-ABC(pvt) ltd</cite>
+        </div>
+        <div class="testimonial">
+            <img src="../../../assets/cus2.png" alt="Customer 2">
+            <p>"The service provided by FixMasters was exceptional. The technician was knowledgeable and courteous. I'll definitely use them again."
+            </p>
+            <cite>- Sarah Johnson - Teacher</cite>
+        </div>
+    </div>
+    <div class="cta">
+        <h2>Ready to get started?</h2>
+        <p>Join us today and experience the future!</p>
+        <a routerLink="/get-started" class="cta-button">Get Started</a>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2023 Your Brand. All rights reserved.</p>
+    </footer>
+</div>

@@ -1,80 +1,30 @@
+/* registration-popup.component.css (or .scss) */
+
 .registration-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url('../../assets/cusReg.png'); /* Set your background image path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the last value to control transparency */
 }
 
-.registration-container::before {
-  content: "";
-  display: block;
-  position: absolute;
+.registration-form {
+  background-color: #ffffff8b;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black overlay */
-  z-index: -1;
+  text-align: center;
 }
 
-.registration-image {
-  filter: brightness(50%); 
+.registration-topic {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-  .registration-form {
-    padding: 20px;
-    background-color: rgba(255, 255, 255);
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    text-align: center;
-    width: 80vh;
-  }
-  
-  .registration-form h2 {
-    margin-bottom: 20px;
-    color: #3498db;
-  }
-  
-  .form-field {
-    width: 100%;
-  }
 
-  
-  mat-form-field {
-    width: 100%;
-  }
-  mat-label {
-    color: #333;
-  }
-  
-  input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  button {
-    width: 50%;
-    padding: 10px;
-    background-color: #3ca4ea;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #379be2;
-  }
-  .registration-topic {
-    font-size: 34px;
-    color: #3498db; /* Change the text color */
-    margin-bottom: 20px;
-    text-transform: uppercase; /* Convert text to uppercase */
-    letter-spacing: 2px; 
-  }
+.form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+

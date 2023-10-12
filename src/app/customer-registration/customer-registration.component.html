@@ -1,29 +1,30 @@
+<!-- registration-popup.component.html -->
 <div class="registration-container">
-    <div class="registration-form">
-      <h2 class="registration-topic">Customer Registration</h2>
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-        <mat-form-field class="form-field">
-          <mat-label>First Name</mat-label>
-          <input matInput placeholder="Enter your first name" formControlName="firstName" required>
-        </mat-form-field>
-        <mat-form-field class="form-field">
-          <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Enter your last name" formControlName="lastName" required>
-        </mat-form-field>
-        <mat-form-field class="form-field">
-          <mat-label>Mobile Number</mat-label>
-          <input matInput placeholder="Enter your mobile number" formControlName="mobileNo" required>
-        </mat-form-field>
-        <mat-form-field class="form-field">
-          <mat-label>Address</mat-label>
-          <input matInput placeholder="Enter your address" formControlName="address" required>
-        </mat-form-field>
-        <mat-form-field class="form-field">
-          <mat-label>Email</mat-label>
-          <input matInput placeholder="Enter your email" formControlName="email" required>
-        </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">Register</button>
-      </form>
-    </div>
+  <div class="registration-form">
+    <h2 class="registration-topic">Customer Registration</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-field">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Enter your first name" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Enter your last name" formControlName="lastName" required>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Mobile Number</mat-label>
+        <input matInput placeholder="Enter your mobile number" formControlName="mobileNo" required>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Enter your address" formControlName="address" required>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary"  type="submit" color="primary">Register</button>
+    </form>
+    <p>Already registered? <a (click)="showLoginPopup()">Login</a></p>
   </div>
-  
+</div>

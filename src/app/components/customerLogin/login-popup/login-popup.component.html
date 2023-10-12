@@ -1,0 +1,11 @@
+<!-- login-popup.component.html -->
+<div class="login-popup">
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <mat-form-field class="email-input">
+        <input matInput placeholder="Email" [(ngModel)]="email" name="email" type="email" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+  </div>
+  

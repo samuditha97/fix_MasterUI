@@ -1,0 +1,67 @@
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 300px;
+  }
+  
+  .service-item {
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+  }
+  
+  .service-icon {
+    font-size: 48px;
+    color: #007bff; /* Adjust the icon color as needed */
+  }
+  
+  .service-name {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  .service-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+  .search-bar {
+    position: fixed;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    margin-top: -50px;
+    margin-left: 36%;
+    width: 490px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button i {
+    font-size: 18px;
+  }
+  

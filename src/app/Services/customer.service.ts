@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Service
  } from '../components/services/Models/service.module';
+import { TechnicianDTO } from '../dto/technician.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -46,8 +47,21 @@ export class CustomerService {
     const token = this.getToken();
     if (token) {
       const tokenPayload = JSON.parse(atob(token.split('.')[1]));
-      return tokenPayload.name;
+      const userId = tokenPayload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
+      console.log("User ID:", userId);
+      return userId;
     }
     return null;
+  }
+
+  getTechniciansByServiceId(serviceId: string): Observable<TechnicianDTO[]> {
+    const url = `${this.apiUrl}/technicians/byservice/${serviceId}`;
+    return this.http.get<TechnicianDTO[]>(url);
+  }
+  
+
+  getCustomerDetails(customerId: string): Observable<any> {
+    const url = `${this.apiUrl}/customers/${customerId}`;
+    return this.http.get(url);
   }
 }

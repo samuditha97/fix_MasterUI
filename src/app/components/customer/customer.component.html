@@ -1,13 +1,32 @@
-<mat-card>
-    <mat-card-header>
-      <mat-card-title>User Profile</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p><strong>First Name:</strong> {{ user.firstName }}</p>
-      <p><strong>Last Name:</strong> {{ user.lastName }}</p>
-      <p><strong>Email:</strong> {{ user.email }}</p>
-      <p><strong>Mobile Number:</strong> {{ user.mobileNo }}</p>
-      <p><strong>Address:</strong> {{ user.address }}</p>
-    </mat-card-content>
-  </mat-card>
-  
+<mat-card class="user-profile-card">
+  <mat-card-header class="user-profile-header">
+    <mat-card-title class="user-profile-title">User Profile</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="user-profile-content">
+    <div class="profile-image-container">
+      <img class="profile-image" src="../../../assets/avatar.png" alt="User Profile Image">
+    </div>
+    <div class="profile-details">
+      <div class="profile-detail">
+        <mat-icon class="profile-icon" style="color: rgb(17, 94, 201);">person</mat-icon>
+        <span style="color: rgb(17, 94, 201);">{{ user.firstName }}</span>
+      </div>
+      <div class="profile-detail">
+        <mat-icon class="profile-icon" style="color: rgb(17, 94, 201);">person</mat-icon>
+        <span style="color: rgb(17, 94, 201);">{{ user.lastName }}</span>
+      </div>
+      <div class="profile-detail">
+        <mat-icon class="profile-icon" style="color: rgb(17, 94, 201);">email</mat-icon>
+        <span style="color: rgb(17, 94, 201);">{{ user.email }}</span>
+      </div>
+      <div class="profile-detail">
+        <mat-icon class="profile-icon" style="color: rgb(17, 94, 201);">phone</mat-icon>
+        <span style="color: rgb(17, 94, 201);">{{ user.mobileNo }}</span>
+      </div>
+      <div class="profile-detail">
+        <mat-icon class="profile-icon" style="color: rgb(17, 94, 201);">location_on</mat-icon>
+        <span style="color: rgb(17, 94, 201);">{{ user.address }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,32 @@
+<div class="customer-details">
+    <h2>Customer Details</h2>
+    <p><strong>Name:</strong> {{ bookingForm.value.customerName }}</p>
+    <p><strong>Address:</strong> {{ bookingForm.value.customerAddress }}</p>
+    <p><strong>Mobile No:</strong> {{ bookingForm.value.customerMobileNo }}</p>
+</div>
+
+<div class="booking-form">
+    <h2>Booking Form</h2>
+    <form [formGroup]="bookingForm">
+        <div class="form-group">
+            <label for="serviceName">Service Name</label>
+            <input type="text" class="form-control" id="serviceName" formControlName="serviceName" placeholder="Service Name" readonly>
+        </div>
+        <div class="form-group">
+            <label for="technicianId">Technician ID</label>
+            <input type="text" class="form-control" id="technicianId" formControlName="technicianId" placeholder="Technician ID" readonly>
+        </div>
+        <div class="form-group">
+            <label for="appointmentDate">Appointment Date</label>
+            <input type="date" class="form-control" id="appointmentDate" formControlName="appointmentDate" placeholder="Appointment Date">
+        </div>
+        <div class="form-group">
+            <label for="requirement">Requirement</label>
+            <textarea class="form-control" id="requirement" formControlName="requirement" placeholder="Requirement"></textarea>
+        </div>
+        <!-- Add other form fields -->
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Confirm</button>
+    </form>
+</div>

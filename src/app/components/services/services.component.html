@@ -1,0 +1,12 @@
+<div class="search-bar">
+  <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="search()" placeholder="Search...">
+  <button (click)="search()"><i class="fas fa-search"></i></button>
+</div>
+
+<div class="service-list">
+  <div *ngFor="let service of filteredServices"  class="service-item">
+    <mat-icon class="service-icon" (click)="navigateToNextStep(service)">{{ service.icon }}</mat-icon>
+    <h3 class="service-name">{{ service.serviceName }}</h3>
+    <p class="service-description">{{ service.details }}</p>
+  </div>
+</div>

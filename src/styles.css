@@ -15,4 +15,4 @@ html, body {
   button {
     background-color: var(--primary-color);
   }
-  
+  @import 'bootstrap/dist/css/bootstrap.min.css';

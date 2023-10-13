@@ -21,6 +21,11 @@ import { LoginPopupComponent } from './components/customerLogin/login-popup/logi
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { CustomerComponent } from './components/customer/customer.component';
+import { ServicesComponent } from './components/services/services.component';
+import { SwiperModule } from 'swiper/angular';
+import { TechnicianListComponent } from './components/technician-list/technician-list.component';
+import { BookingComponent } from './components/booking/booking.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,11 @@ import { CustomerComponent } from './components/customer/customer.component';
     CustomerRegistrationComponent,
     LandingComponent,
     LoginPopupComponent,
-    CustomerComponent
+    CustomerComponent,
+    ServicesComponent,
+    TechnicianListComponent,
+    TechnicianListComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +58,9 @@ import { CustomerComponent } from './components/customer/customer.component';
     MatSnackBarModule,
     MatDialogModule,
     NgImageSliderModule,
+    MatFormFieldModule,
+    MatDatepickerModule
+    
 
   ],
   providers: [],

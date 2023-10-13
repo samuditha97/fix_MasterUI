@@ -1,0 +1,79 @@
+/* Add these styles to your component's CSS file or your global styles */
+
+.technician-list {
+    position: fixed;
+    margin-top: 300px; /* Adjust this value as needed */
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .technician-table {
+    width: 80%; /* Adjust this value to control the table's width */
+    margin: 0 auto; /* This centers the table horizontally */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .technician-table th, .technician-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .technician-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .technician-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .technician-table tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .star-icon {
+    color: gold;
+    font-size: 20px;
+  }
+  
+  .star-filled {
+    color: gold;
+  }
+  .make-appointment-button {
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 8px 16px; /* Padding for the button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  .make-appointment-button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
+  .button-spacing {
+    margin-left: 10px; /* Adjust the margin value to control the spacing between the buttons */
+  }
+  
+  .make-review-button{
+    background-color: #1cc235; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 8px 16px; /* Padding for the button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+
+.make-review-button:hover{
+    background-color: #155724;
+}
+
+.custom-dialog {
+    /* Add your custom styles for the dialog container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 500px;
+  }
+  

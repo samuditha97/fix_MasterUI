@@ -1,0 +1,44 @@
+<div class="technician-list">
+    <table class="technician-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mobile No</th>
+          <th>Location</th>
+          <th>Review</th>
+          <th>Rating</th>
+          <th>Actions</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let technician of technicians">
+          <td>{{ technician.name }}</td>
+          <td>{{ technician.mobileNo }}</td>
+          <td>{{ technician.location }}</td>
+          <td>
+            <!-- Display all reviews along with their dates -->
+            <div *ngFor="let review of technician.review">
+              <p>{{ review.message }} ({{ review.date | date:'medium' }})</p>
+            </div>
+          </td>
+          <td>
+            <div class="star-rating">
+                <span *ngFor="let _ of [].constructor(technician.rate); let j = index">
+                  <mat-icon class="star-icon star-filled">star</mat-icon>
+                </span>
+                <span *ngFor="let _ of [].constructor(5 - technician.rate); let j = index">
+                  <mat-icon class="star-icon">star_border</mat-icon>
+                </span>
+              </div>
+          </td>
+          <td>
+            <button class="make-appointment-button" (click)="makeAppointment(technician.id)">Make Appointment</button>
+            <span class="button-spacing"></span> <!-- Add a span element with a CSS class for spacing -->
+            <button class="make-review-button">Add Review</button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

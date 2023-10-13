@@ -7,6 +7,7 @@ import { AuthGuard } from './AuthGuard';
 import { ServicesComponent } from './components/services/services.component';
 import { TechnicianListComponent } from './components/technician-list/technician-list.component';
 import { BookingComponent } from './components/booking/booking.component';
+import { AppointmentsComponent } from './components/appointments/appointments.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent },
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path: 'myprofile', component: CustomerComponent},
   {path: 'services', component: ServicesComponent},
   { path: 'technicians/:id', component: TechnicianListComponent},
-
+  {path: 'appointments', component: AppointmentsComponent}
 ];
 
 @NgModule({

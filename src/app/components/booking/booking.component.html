@@ -7,18 +7,18 @@
 
 <div class="booking-form">
     <h2>Booking Form</h2>
-    <form [formGroup]="bookingForm">
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="serviceName">Service Name</label>
-            <input type="text" class="form-control" id="serviceName" formControlName="serviceName" placeholder="Service Name" readonly>
+            <input type="text" class="form-control" id="serviceName" formControlName="serviceName" placeholder="Service Name">
         </div>
         <div class="form-group">
             <label for="technicianId">Technician ID</label>
             <input type="text" class="form-control" id="technicianId" formControlName="technicianId" placeholder="Technician ID" readonly>
         </div>
         <div class="form-group">
-            <label for="appointmentDate">Appointment Date</label>
-            <input type="date" class="form-control" id="appointmentDate" formControlName="appointmentDate" placeholder="Appointment Date">
+            <label for="appointmentDateTime">Appointment Date and Time</label>
+            <input type="datetime-local" class="form-control" id="appoinmentDate" formControlName="appoinmentDate" placeholder="Appointment Date and Time">
         </div>
         <div class="form-group">
             <label for="requirement">Requirement</label>

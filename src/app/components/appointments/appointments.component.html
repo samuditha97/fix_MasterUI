@@ -1,0 +1,32 @@
+<div class="technician-list">
+    <table class="technician-table">
+      <thead>
+        <tr>
+          <th>Booking Id</th>
+          <th>Service Nmae</th>
+          <th>Technician Id</th>
+          <th>Date</th>
+          <th>Estimated Price</th>
+          <th>Action</th>
+          <th>Approve Deal</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.serviceName }}</td>
+          <td>{{ booking.technicianId}}</td>
+          <td>{{ booking.appoinmentDate | date: 'dd/MM/yyyy HH:mm' }}</td>
+          <td>LKR 789900</td>
+          <td>
+            <button class="make-appointment-button" >Canceled</button>
+          </td>
+          <td>
+            <button class="make-review-button">Approve Deal</button>
+          </td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

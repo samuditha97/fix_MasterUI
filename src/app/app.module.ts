@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoginPopupComponent } from './components/customerLogin/login-popup/login-popup.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { CustomerComponent } from './components/customer/customer.component';
 import { ServicesComponent } from './components/services/services.component';
@@ -26,6 +26,7 @@ import { SwiperModule } from 'swiper/angular';
 import { TechnicianListComponent } from './components/technician-list/technician-list.component';
 import { BookingComponent } from './components/booking/booking.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { AppointmentsComponent } from './components/appointments/appointments.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     ServicesComponent,
     TechnicianListComponent,
     TechnicianListComponent,
-    BookingComponent
+    BookingComponent,
+    AppointmentsComponent
   ],
   imports: [
     BrowserModule,
@@ -60,10 +62,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     NgImageSliderModule,
     MatFormFieldModule,
     MatDatepickerModule
-    
 
   ],
-  providers: [],
+  providers: [ { provide: MAT_DIALOG_DATA, useValue: {} },
+    { provide: MatDialogRef, useValue: {} },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

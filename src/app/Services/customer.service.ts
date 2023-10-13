@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Service
  } from '../components/services/Models/service.module';
 import { TechnicianDTO } from '../dto/technician.interface';
+import { BookingDto } from '../dto/booking.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -64,4 +65,18 @@ export class CustomerService {
     const url = `${this.apiUrl}/customers/${customerId}`;
     return this.http.get(url);
   }
+
+  submitBooking(bookingData: any): Observable<any> {
+    // Use the appropriate endpoint for submitting bookings
+    return this.http.post(`${this.apiUrl}/bookings`, bookingData);
+  }
+
+  getBookingsByCustomerId(customerId: string): Observable<BookingDto[]> {
+    const url = `${this.apiUrl}/bookings/by-customer/${customerId}`;
+    return this.http.get<BookingDto[]>(url);
+  }
+  
+  
+  
+
 }

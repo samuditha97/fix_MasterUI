@@ -28,4 +28,15 @@ export class AppointmentsComponent implements OnInit {
       console.error("Customer ID not found in token.");
     }
   }
+
+  cancelBooking(bookingId: string) {
+    // Make an HTTP request to cancel the booking
+    this.customerService.cancelBooking(bookingId).subscribe((response) => {
+      // If the cancellation is successful, update the booking status locally
+      const canceledBooking = this.bookings.find((booking) => booking.id === bookingId);
+      if (canceledBooking) {
+        canceledBooking.isCanceled = false;
+      }
+    });
+  }
 }

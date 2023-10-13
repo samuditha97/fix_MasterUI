@@ -7,6 +7,7 @@
           <th>Technician Id</th>
           <th>Date</th>
           <th>Estimated Price</th>
+          <th>Status</th>
           <th>Action</th>
           <th>Approve Deal</th> 
         </tr>
@@ -18,8 +19,9 @@
           <td>{{ booking.technicianId}}</td>
           <td>{{ booking.appoinmentDate | date: 'dd/MM/yyyy HH:mm' }}</td>
           <td>LKR 789900</td>
+          <td>{{booking.isCanceled}}</td>
           <td>
-            <button class="make-appointment-button" >Canceled</button>
+            <button class="make-appointment-button" (click)="cancelBooking(booking.id)">Canceled</button>
           </td>
           <td>
             <button class="make-review-button">Approve Deal</button>

@@ -76,6 +76,11 @@ export class CustomerService {
     return this.http.get<BookingDto[]>(url);
   }
   
+  cancelBooking(bookingId: string): Observable<any> {
+    // Use the appropriate endpoint for canceling bookings
+    const url = `${this.apiUrl}/bookings/${bookingId}`;
+    return this.http.put(url, { isCanceled: true }); // You can pass an object with isCanceled as true to mark it as canceled
+  }
   
   
 
